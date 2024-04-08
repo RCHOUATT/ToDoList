@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Bienvenue</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="with = divice-width , initial-scale = 1" >
+        <link rel="shortcut icon" type="image/x-icon" href="Img/list_timeline.ico">
+        <link rel="stylesheet" href="CSS/Style.css">
+        <script src="JS/Script.js"></script>
+    </head>
+    <body>
+        <div id="corps">
+            <header id="en_tete">
+                <div id="profile">
+                    <img src="Img/Logo.png" alt="Logo_Task_to_do" class="profile">
+                </div>
+            </header>
+            <main class="pricipale">
+                <div class="bloc_principal">
+                    <h1>Bienvenue !</h1>
+                    <div class="mainmenus">
+                        <div class="el1 filter1"><!-- mpc signifie propriété commune -->
+                            <a href="Pages/All.html" class="liens"><img alt="Tous_les_taches" src="Img/All.png" class="allimg" title="Tous_les_taches"></a>
+                        </div>
+                        <div class="el2 filter1">
+                            <a href="Pages/Favoris.html" class="liens"><img alt="Les_favoris" src="Img/favorite_Checked.png" class="allimg" title="Les_favoris"></a>
+                        </div>
+                        <div class="el3 filter1">
+                            <a href="Pages/Quotidiennes.html" class="liens"><img alt="taches_quotidiennes" src="Img/Daily.png" class="allimg" title="Les_taches_quotidiennes"></a>
+                        </div>
+                        <div class="el4 filter1">
+                            <a href="Pages/Quotidiennes.html" class="liens"><img alt="taches_hebdo" src="Img/Week.png" class="allimg" title="Les_taches_hebdomendaires"></a>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <button name="nouvelle_tâche">Nouvelle</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div class="right1" id="right1">
+            <button class="fermer" id="fermer" onclick="fermerModale()">X</button>
+            <div class="champ container01" id="champ" >
+                <h3>Veuillez remplir le formulaire ci-dessous</h3>
+                <div class="formulaire" id="formulaire">
+                    <div class="title r01">
+                        <p>Titre</p>
+                        <input type="text" id="title">
+                    </div>
+                    <div class="date r01">
+                        <p>Date</p>
+                        <input type="date" id="date">
+                    </div>
+                    <div class="text r01">
+                        <p>Description</p>
+                        <textarea rows="5" placeholder="Description de votre tache" class="zonetext" maxlength="500" id="text"></textarea>
+                    </div>
+                </div> 
+                <div class="foot">
+                    <div class="button">
+                        <!-- <a href="#" class="liens"><button name="nouvelle_tâche" id="ajout" type="button">Ajouter</button></a> -->
+                        <button name="nouvelle_tâche" id="ajout" >Ajouter</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </body>
+</html>

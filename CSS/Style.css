@@ -14,7 +14,11 @@
     position: relative;
     color: var(--text);
     flex: 1 1 1;
-    font-size: 22px;
+}
+p
+{
+    
+    font-size: 18px;
 }
 :root
 {
@@ -28,6 +32,7 @@ body
 {
     background-color: #2F2D2D;
     height : 100vh;
+    width: 100vw;
 }
 h1
 {
@@ -131,8 +136,9 @@ button:hover
 {
     margin: 60px auto;
     width: fit-content;
-    height: 100%;
+    height: 360px;
     position: relative;
+    /* border: 1px solid  blue; */
 }
 .zonetext:focus, input:focus, .Priorite:focus
 {
@@ -145,6 +151,7 @@ input, .zonetext, option, .Priorite
     color: rgb(68, 67, 67);
     padding: 5px 12px;  
     width: 100%;
+    /* border: 3px solid blue; */
 }
 .zonetext
 {
@@ -155,7 +162,13 @@ input, .zonetext, option, .Priorite
     border-radius: 18px;
     background-color: transparent;
     border: 1px solid  transparent;
-    pointer-events: visible;
+    cursor: pointer;
+}
+.taches::-webkit-scrollbar
+{
+    border-radius: 18px;
+    background-color: white;
+    border: 1px solid  transparent;
     cursor: pointer;
 }
 .zonetext::-webkit-scrollbar-thumb
@@ -185,29 +198,57 @@ input, .zonetext, option, .Priorite
     /* border: 1px solid  blue; */
     /* height: fit-content; */
 }
-h3
-{
-    text-align: center;
-    font-size: 1.2rem;
-    margin-bottom: 12px;
-}
-.foot
-{
-    display: flex;
-    width: 100%;
-    bottom: 20px;
-    justify-content: space-between;
-    margin-top: 25px;
-}
-.fermer
-{
+.tacheinfocont{
+    width: 50vw;
+    height: max-content;
+    padding: 12px;
+    background: var(--main1);
+    color: var(--text);
+    box-sizing: border-box;
+    border-radius: var(--radius_c);
     position: absolute;
-    right: 10px;
-    top: 10px;
-    background-color: brown;
+    top: 25vh;
+    left: 25vw;
+    animation: rentre 2s ease-in-out;
+    /* display: none; */
 }
-.fermer:hover
+@keyframes rentre{
+    0%{
+        transform : scale(0.1, 0.1);
+    }
+    100%{
+        transform : scale(1, 1)
+    }
+}
+.tacheinfos{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+h1, .souscont
 {
-    box-shadow: 0px 1px 6px 2px rgb(238, 116, 124);
-    cursor: pointer;
+    width: 100%;
+    /* border: 1px solid white; */
 }
+.souscont{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.sousleft{
+    width: 60%;
+    min-width: 200px;
+}
+.sousright{
+    width: 35%;
+    min-width: 125px;
+    padding: 5px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+.sousright > div
+{   width: 100%;}
